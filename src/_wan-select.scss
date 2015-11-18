@@ -1,14 +1,17 @@
 .wan-select {
-  display: inline-block;
+//  display: inline-block;
   position: relative;
+
   .ws-content {
     background-color: white;
     box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .14), 0 2px 2px 0 rgba(0, 0, 0, .098), 0 1px 5px 0 rgba(0, 0, 0, .084);
     max-height: 400px;
-    min-width: 400px;
+    min-width: 150px;
+    max-width: 270px;
     overflow: auto;
-    padding: 10px;
-    position: absolute;
+    padding: 10px 0px 0px 10px;
+    font-size: small;
+    position: fixed;
     transform: scaleY(0);
     transform-origin: left top;
     transition: all 0.2s ease;
@@ -25,16 +28,7 @@
     .ws-select-shortcut {
       width: 100%;
       .ws-select-button {
-        border: 1px solid #eee;
-        border-radius: 0;
-        box-shadow: none;
-        float: left;
-        height: 25px;
-        line-height: 1em;
-        margin: 0;
         min-height: 25px;
-        padding: 0;
-        width: 33%;
       }
     }
     hr {
@@ -80,4 +74,12 @@
     -ms-transform: scaleY(0);
     -o-transform: scaleY(0);
   }
+  label {
+    font-size: smaller;
+    color: rgba(0,0,0,0.54);
+  }
+}
+
+.showHand {
+  cursor: hand;
 }
