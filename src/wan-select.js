@@ -93,11 +93,11 @@
       vm.result = '请选择';
 
       vm.sourceData = $scope.sourceData
-      vm.searchStr = '';
+      //vm.searchStr = '';
 
-      $scope.$watch('vm.searchStr', function(newVal, oldVal) {
-        search(newVal || '');
-      });
+      //$scope.$watch('vm.searchStr', function(newVal, oldVal) {
+      //  search(newVal || '');
+      //});
 
       $scope.$watchCollection('selectedData', function(newVal, oldVal) {
         vm.setSearchResult();
@@ -121,7 +121,7 @@
         }
         vm.show = true;
         //vm.animate({scrollTop: 0}, "slow");
-        vm.searchStr = '';
+        //vm.searchStr = '';
       };
 
       vm.toggle = function(event, item) {
@@ -150,7 +150,7 @@
         } else if (length > 3) {
           vm.result = length.toString() + " Parts selected" ;
         } else {
-          vm.result = ""
+          vm.result = "";
           angular.forEach($scope.selectedData, function(value, key){
             vm.result += value.part + " ";
           });
